@@ -11,6 +11,12 @@ public class Conta {
 	private int agencia;
 	private static int total;
 	
+	/**
+	 * Construtor para inicializar o objeto Conta a partir da agencia e numero
+	 * @param numero
+	 * @param agencia
+	 */
+	
 	public Conta(int numero, int agencia) {
 		Conta.total++;
 		this.agencia = agencia;
@@ -20,6 +26,11 @@ public class Conta {
 	public void deposita(double valor) {
 		this.saldo += valor;
 	}
+	
+	/**
+	 * Valor precisa ser menor ou igual ao saldo
+	 * @param valor
+	 */
 	
 	public void saca(double valor) {
 		if (this.saldo < valor) {
