@@ -1,5 +1,9 @@
 package br.com.bytebank.banco.modelo;
-
+/**
+ * Classe representa a moldura de uma conta
+ * @author Alice
+ *
+ */
 public class Conta {
 	private int numero;
 	private Cliente titular;
