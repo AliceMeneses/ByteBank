@@ -1,6 +1,8 @@
 package br.com.bytebank.banco.teste.util;
 
 import java.util.ArrayList;
+
+import br.com.bytebank.banco.modelo.Cliente;
 import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 import br.com.bytebank.banco.modelo.ContaPoupanca;
@@ -26,6 +28,18 @@ public class TestaArrayList {
 		System.out.println("Elementos da lista: ");
 		for(Object obj : lista) {
 			System.out.println(obj);
+		}
+		
+		System.out.println("-----------------------");
+		System.out.println("ArrayList com generics");
+		
+		ArrayList<Conta> contas = new ArrayList<>();
+		
+		contas.add(cc);
+		contas.add(cp);
+		
+		for(Conta c : contas) {
+			System.out.println(c);
 		}
 		
 	}
