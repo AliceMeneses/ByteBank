@@ -73,6 +73,20 @@ public class Conta {
 	}
 	
 	@Override
+	public boolean equals(Object obj) {
+		Conta outra = (Conta) obj;
+		if(this.agencia != outra.agencia) {
+			return false;
+		}
+		
+		if(this.numero != outra.numero) {
+			return false;
+		}
+		
+		return true;
+	}
+	
+	@Override
 	public String toString() {
 		return "Número: " + this.numero + " Agência: " + this.agencia;
 	}
