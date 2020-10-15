@@ -17,7 +17,7 @@ public class Conta {
 	 * @param agencia
 	 */
 	
-	public Conta(int numero, int agencia) {
+	public Conta(int agencia, int numero) {
 		Conta.total++;
 		this.agencia = agencia;
 		this.numero = numero;
