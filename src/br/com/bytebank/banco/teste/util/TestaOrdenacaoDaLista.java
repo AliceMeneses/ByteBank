@@ -1,6 +1,7 @@
 package br.com.bytebank.banco.teste.util;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 
 import br.com.bytebank.banco.modelo.Conta;
@@ -46,7 +47,7 @@ public class TestaOrdenacaoDaLista {
 		System.out.println();
 		
 		for(Conta c : lista) {
-			System.out.println(c + ", Titular: " + c.getTitular().getNome());
+			System.out.println(c + ", Titular: " + c.getTitular().getNome()  + ", Saldo: " + c.getSaldo());
 		}
 		
 		System.out.println("------------------------------------------");
@@ -64,13 +65,31 @@ public class TestaOrdenacaoDaLista {
 		System.out.println("Lista ordenada segundo o titular da conta");
 		System.out.println();
 		
-		lista.sort(new TitularDaContaComparator());
+		lista.sort(new TitularDaContaComparator());//Ordenação a partir do java 1.8
 		
 		for(Conta c : lista) {
 			System.out.println(c  + ", Titular: " + c.getTitular().getNome());
 		}
 		
-
+		System.out.println("------------------------------------------");
+		System.out.println("Lista ordenada segundo a ordenação natural da conta usando o metodo da instancia:");
+		System.out.println();
+		
+		lista.sort(null);// Forçando ordenação natural
+		
+		for(Conta c : lista) {
+			System.out.println(c  + ", Saldo: " + c.getSaldo());
+		}
+		
+		System.out.println("------------------------------------------");
+		System.out.println("Lista ordenada segundo a ordenação natural da conta usando a classe Collections:");
+		System.out.println();
+		
+		Collections.sort(lista);
+		
+		for(Conta c : lista) {
+			System.out.println(c  + ", Saldo: " + c.getSaldo());
+		}
 	}
 
 }
