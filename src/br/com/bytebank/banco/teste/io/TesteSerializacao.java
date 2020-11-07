@@ -18,6 +18,7 @@ public class TesteSerializacao {
 		
 		ContaCorrente cc = new ContaCorrente(4597,8975);
 		cc.setTitular(cliente);
+		cc.deposita(1000);
 		
 		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("contacorrente.bin"));
 		oos.writeObject(cc);
