@@ -1,8 +1,6 @@
 package br.com.bytebank.banco.modelo;
 
-import java.io.Serializable;
-
-public class ContaCorrente extends Conta implements Tributavel, Serializable{
+public class ContaCorrente extends Conta implements Tributavel{
 	
 	private static final long serialVersionUID = 1L;
 
